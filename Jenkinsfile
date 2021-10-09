@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'docker build -t dep7jenkinstodocker .'
+                sh 'docker build -t fordonez20/dep7jenkinstodocker .'
                 
             }
         }
@@ -20,8 +20,8 @@ pipeline {
         }
         stage ('Push') {
             steps {
-                sh 'docker tag dep7jenkinstodocker:latest'
-                sh 'docker push fordonez20:dep7jenkinstodocker:latest'
+                
+                sh 'docker push fordonez20/dep7jenkinstodocker:latest'
                 
             }
         }
